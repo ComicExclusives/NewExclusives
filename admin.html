@@ -73,7 +73,52 @@
     </div>
 
     <h3>Instagram Caption / Notes</h3>
-    <textarea id="input" placeholder="Paste Instagram caption here…"></textarea>
+    <textarea id="input" placeholder="Paste Instagram caption here…">You are helping maintain a curated database of upcoming retailer-exclusive comic releases.
+
+TASK:
+Extract ONLY explicitly stated information from the Instagram post content below.
+Do NOT guess, infer, or invent any details.
+
+RULES:
+- If a value is not clearly stated, use null
+- Normalize comic titles (e.g., "BATMAN #158" → "Batman #158")
+- Series name must NOT include the issue number
+- Dates must be in ISO format: YYYY-M-DD-hh:mmAM/PM
+- Retailer is the store announcing the exclusive
+- Use consistent naming (DC, Marvel, Image, BOOM! Studios)
+- Output VALID JSON ONLY (no explanations, no comments)
+
+OUTPUT STRUCTURE:
+{
+  "id": "",
+  "title": "",
+  "publisher": "",
+  "series": "",
+  "issueNumber": null,
+  "releaseDate": "",
+  "retailer": {
+    "name": "",
+    "instagram": "",
+    "website": null
+  },
+  "variantType": "Retailer Exclusive",
+  "coverArtist": null,
+  "printRun": null,
+  "status": "announced",
+  "source": {
+    "type": "instagram",
+    "url": ""
+  },
+  "notes": null,
+}
+
+IMPORTANT:
+- Leave "id" empty — it will be created manually
+- Leave "addedAt" empty unless today’s date is explicitly requested
+- If multiple variants are mentioned, summarize in "notes"
+
+INPUT (Instagram caption and/or image text):
+</textarea>
 
     <h3>AI JSON Output (Draft)</h3>
     <textarea id="jsonInput" placeholder="Paste AI-generated JSON here…"></textarea>
