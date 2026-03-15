@@ -6,39 +6,126 @@
   },
   "exclusives": [
     {
-      "id": "unknown-batman-158",
-      "title": "Batman #158",
+      "id": "",
+      "title": "Absolute Batman #19",
       "publisher": "DC",
-      "series": "Batman",
-      "issueNumber": 158,
-      "releaseDate": "2026-4-10-9:00AM",
+      "series": "Absolute Batman",
+      "issueNumber": 19,
+      "releaseDate": "2026-4-8-12:00AM",
       "retailer": {
-        "name": "Unknown Comics",
-        "instagram": "https://instagram.com/unknowncomics",
+        "name": "markspearsmonsters",
+        "instagram": null,
+        "website": "markspearsmonsters.com"
+      },
+      "variantType": "Retailer Exclusive",
+      "coverArtist": "Mark Spears",
+      "printRun": null,
+      "status": "announced",
+      "source": {
+        "type": "instagram",
+        "url": null
+      },
+      "notes": null
+    },
+    {
+      "id": "",
+      "title": "Absolute Batman #19",
+      "publisher": "DC",
+      "series": "Absolute Batman",
+      "issueNumber": 19,
+      "releaseDate": "2026-3-16-12:00PM",
+      "retailer": {
+        "name": "Claymannart",
+        "instagram": null,
         "website": null
       },
       "variantType": "Retailer Exclusive",
-      "coverArtist": "Jock",
+      "coverArtist": "Clay Mann",
       "printRun": null,
       "status": "announced",
       "source": {
         "type": "instagram",
-        "url": "https://instagram.com/p/XXXX"
+        "url": null
       },
-      "notes": "Virgin cover available",
-      "addedAt": "2026-03-14"
+      "notes": null
     },
     {
-      "id": "midtown-spawn-350",
-      "title": "Spawn #350",
-      "publisher": "Image",
-      "series": "Spawn",
-      "issueNumber": 350,
-      "releaseDate": "2026-4-17-9:00AM",
+      "id": "",
+      "title": "Absolute Batman #19",
+      "publisher": "DC",
+      "series": "Absolute Batman",
+      "issueNumber": 19,
+      "releaseDate": "2026-3-16-00:00PM",
       "retailer": {
-        "name": "Midtown Comics",
-        "instagram": "https://instagram.com/midtowncomics",
-        "website": "https://www.midtowncomics.com"
+        "name": "Davis Rider",
+        "instagram": null,
+        "website": "whatnot.com"
+      },
+      "variantType": "Retailer Exclusive",
+      "coverArtist": "Dan Quintana",
+      "printRun": null,
+      "status": "announced",
+      "source": {
+        "type": "instagram",
+        "url": "whatnot.com"
+      },
+      "notes": null
+    },
+    {
+      "id": "",
+      "title": "Absolute Batman #19",
+      "publisher": "DC",
+      "series": "Absolute Batman",
+      "issueNumber": 19,
+      "releaseDate": "2026-3-16-00:00PM",
+      "retailer": {
+        "name": "Comic Tom",
+        "instagram": null,
+        "website": "whatnot.com"
+      },
+      "variantType": "Retailer Exclusive",
+      "coverArtist": "Dan Quintana",
+      "printRun": null,
+      "status": "announced",
+      "source": {
+        "type": "instagram",
+        "url": "whatnot.com"
+      },
+      "notes": null
+    },
+    {
+      "id": "",
+      "title": "Absolute Batman #19",
+      "publisher": "DC",
+      "series": "Absolute Batman",
+      "issueNumber": 19,
+      "releaseDate": "2026-3-19-00:00PM",
+      "retailer": {
+        "name": "Comic Tom",
+        "instagram": null,
+        "website": "whatnot.com"
+      },
+      "variantType": "Retailer Exclusive",
+      "coverArtist": "Ariel Diaz",
+      "printRun": null,
+      "status": "announced",
+      "source": {
+        "type": "instagram",
+        "website": "whatnot.com"
+      },
+      "notes": "Davis Rider & Comic Tom WhatNot MegaCon streams – “all con weekend”  - need to check WN and social media for exact drop info"
+    },
+    {
+      "id": "",
+      "title": "Absolute Batman #19 w/ Scott Snyder",
+      "publisher": "DC",
+      "series": "Absolute Batman",
+      "issueNumber": 19,
+      "releaseDate": "2026-3-21-00:00PM",
+      "retailer": {
+        "name": "Trinity Comics",
+        "instagram": null,
+        "website": "whatnot.com"
       },
       "variantType": "Retailer Exclusive",
       "coverArtist": null,
@@ -46,79 +133,55 @@
       "status": "announced",
       "source": {
         "type": "instagram",
-        "url": "https://instagram.com/p/YYYY"
+        "url": null
       },
-      "notes": null,
-      "addedAt": "2026-03-14"
+      "notes": "New exclusive cover announced with Scott Snyder appearing on WhatNot."
     },
     {
-      "id": "forbiddenplanet-xmen-12",
-      "title": "X-Men #12",
-      "publisher": "Marvel",
-      "series": "X-Men",
-      "issueNumber": 12,
-      "releaseDate": "2026-4-24-9:00AM",
+      "id": "",
+      "title": "Absolute Batman #18",
+      "publisher": "DC",
+      "series": "Absolute Batman",
+      "issueNumber": 18,
+      "releaseDate": "2026-3-16-7:00PM",
       "retailer": {
-        "name": "Forbidden Planet",
-        "instagram": "https://instagram.com/forbiddenplanet",
-        "website": "https://forbiddenplanet.com"
+        "name": "The Comic Mint",
+        "instagram": null,
+        "website": "thecomicmint.com"
       },
       "variantType": "Retailer Exclusive",
-      "coverArtist": null,
+      "coverArtist": "InHyuk Lee",
       "printRun": null,
       "status": "announced",
       "source": {
         "type": "instagram",
-        "url": "https://instagram.com/p/ZZZZ"
+        "url": null
       },
-      "notes": "Exclusive colorway cover",
-      "addedAt": "2026-03-14"
+      "notes": "MegaCon spot foil virgin variant; available only from 7–10 PM ET."
     },
+
     {
-      "id": "unknown-somethingiscillingthechildren-38",
-      "title": "Something Is Killing the Children #38",
-      "publisher": "BOOM! Studios",
-      "series": "Something Is Killing the Children",
-      "issueNumber": 38,
-      "releaseDate": "2026-5-1-9:00AM",
+      "id": "",
+      "title": "Absolute Batman #19",
+      "publisher": "DC",
+      "series": "Absolute Batman",
+      "issueNumber": 19,
+      "releaseDate": "2026-3-16-6:00PM",
       "retailer": {
-        "name": "Unknown Comics",
-        "instagram": "https://instagram.com/unknowncomics",
-        "website": null
+        "name": "616 Comics",
+        "instagram": null,
+        "website": "the616comics.com"
       },
       "variantType": "Retailer Exclusive",
-      "coverArtist": null,
+      "coverArtist": "Fabrizio De Tommaso",
       "printRun": null,
       "status": "announced",
       "source": {
         "type": "instagram",
-        "url": "https://instagram.com/p/AAAA"
+        "url": null
       },
-      "notes": null,
-      "addedAt": "2026-03-14"
-    },
-    {
-      "id": "krscomics-amazing-spiderman-55",
-      "title": "Amazing Spider-Man #55",
-      "publisher": "Marvel",
-      "series": "Amazing Spider-Man",
-      "issueNumber": 55,
-      "releaseDate": "2026-5-8-9:00AM",
-      "retailer": {
-        "name": "KRS Comics",
-        "instagram": "https://instagram.com/krscomics",
-        "website": "https://krscomics.com"
-      },
-      "variantType": "Retailer Exclusive",
-      "coverArtist": null,
-      "printRun": null,
-      "status": "announced",
-      "source": {
-        "type": "instagram",
-        "url": "https://instagram.com/p/BBBB"
-      },
-      "notes": "Trade dress and virgin variants",
-      "addedAt": "2026-03-14"
+      "notes": null
     }
+     
   ]
 }
