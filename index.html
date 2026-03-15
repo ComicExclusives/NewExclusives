@@ -127,7 +127,7 @@
 
         div.innerHTML = `
           <div class="title">
-            ${item.title}
+            ${item.title} - ${item.coverArtist ? `Cover by ${item.coverArtist}` : 'No cover artist info'}
             <span class="badge ${getPublisherClass(item.publisher)}">
               ${item.publisher}
             </span>
@@ -140,7 +140,7 @@
           ${countdownText ? `<div class="meta countdown">${countdownText}</div>` : ''}
 
           <div class="retailer">
-            Retailer: <strong>${item.retailer.name}</strong>
+            Retailer: <strong>${item.retailer.url ? `<a href="${item.retailer.url}" target="_blank">${item.retailer.name}</a>` : item.retailer.name}</strong>
           </div>
 
           ${item.notes ? `<div class="meta">Notes: ${item.notes}</div>` : ''}
