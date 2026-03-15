@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Exclusive Admin Helper</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link rel="stylesheet" href="./css/styles.css" />
+
+  <style>
+    .admin {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    textarea {
+      width: 100%;
+      min-height: 140px;
+      padding: 0.75rem;
+      font-family: monospace;
+      font-size: 0.85rem;
+      border-radius: 8px;
+      border: 1px solid #d1d5db;
+      margin-bottom: 1rem;
+    }
+
+    .preview {
+      background: #111827;
+      color: #e5e7eb;
+      padding: 1rem;
+      border-radius: 8px;
+      font-family: monospace;
+      font-size: 0.8rem;
+      white-space: pre-wrap;
+      margin-top: 1rem;
+    }
+
+    .hint {
+      font-size: 0.85rem;
+      color: #6b7280;
+      margin-bottom: 1rem;
+    }
+
+    button {
+      padding: 0.5rem 0.9rem;
+      border-radius: 8px;
+      border: none;
+      font-weight: 700;
+      cursor: pointer;
+      background: #3b82f6;
+      color: #ffffff;
+    }
+
+    button.secondary {
+      background: #6b7280;
+      margin-left: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="admin">
+    <h1>Admin Helper 🛠️</h1>
+    <p class="updated">
+      Paste Instagram content → extract with AI → review → move to <code>pending.json</code>
+    </p>
+
+    <div class="hint">
+      1. Paste the Instagram caption (and image text if needed)<br>
+      2. Copy the extraction prompt into AI<br>
+      3. Paste AI JSON output below<br>
+      4. Review and copy into <code>pending.json</code>
+    </div>
+
+    <h3>Instagram Caption / Notes</h3>
+    <textarea id="input" placeholder="Paste Instagram caption here…"></textarea>
+
+    <h3>AI JSON Output (Draft)</h3>
+    <textarea id="jsonInput" placeholder="Paste AI-generated JSON here…"></textarea>
+
+    <button onclick="formatJson()">Format & Validate JSON</button>
+    <button class="secondary" onclick="clearFields()">Clear</button>
+
+    <div id="preview" class="preview" style="display:none;"></div>
+  </div>
+
+  <script>
+    function formatJson() {
+      const input = document.getElementById('jsonInput').value;
+      const preview = document.getElementById('preview');
+
+      try {
+        const obj = JSON.parse(input);
+        preview.textContent = JSON.stringify(obj, null, 2);
+        preview.style.display = 'block';
+      } catch (err) {
+        preview.textContent = '❌ Invalid JSON — please fix formatting errors.';
+        preview.style.display = 'block';
+      }
+    }
+
+    function clearFields() {
+      document.getElementById('input').value = '';
+      document.getElementById('jsonInput').value = '';
+      document.getElementById('preview').style.display = 'none';
+    }
+  </script>
+
+</body>
+</html>

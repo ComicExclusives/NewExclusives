@@ -1,0 +1,155 @@
+:root {
+  --accent-blue: #3b82f6;
+  --accent-pink: #ec4899;
+  --accent-purple: #8b5cf6;
+
+  --text-main: #1f2937;
+  --text-muted: #6b7280;
+
+  --card-bg: #ffffff;
+  --page-bg: #f7f7f8;
+}
+
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  background: var(--page-bg);
+  color: var(--text-main);
+  margin: 0;
+  padding: 2rem;
+}
+
+h1 {
+  margin-bottom: 0.25rem;
+  color: var(--accent-purple);
+  font-weight: 800;
+  letter-spacing: -0.4px;
+}
+
+.updated {
+  color: var(--text-muted);
+  margin-bottom: 2rem;
+  font-size: 0.9rem;
+}
+
+.exclusive {
+  background: var(--card-bg);
+  border-radius: 12px;
+  padding: 1rem 1.25rem;
+  margin-bottom: 1.25rem;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.exclusive:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+}
+
+.title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #111827;
+}
+
+.meta {
+  margin-top: 0.25rem;
+  color: #4b5563;
+  font-size: 0.9rem;
+}
+
+.retailer {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #374151;
+}
+
+/* Base badge style */
+.badge {
+  display: inline-block;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  margin-left: 0.5rem;
+  letter-spacing: 0.04em;
+  color: #ffffff;
+  vertical-align: middle;
+}
+
+/* Publisher color coding */
+.badge.marvel {
+  background: #e11d48; /* Marvel red */
+}
+
+.badge.dc {
+  background: #2563eb; /* DC blue */
+}
+
+.badge.image {
+  background: #111827; /* Image black */
+}
+
+.badge.boom {
+  background: #7c3aed; /* BOOM! purple */
+}
+
+.badge.default {
+  background: linear-gradient(
+    135deg,
+    var(--accent-blue),
+    var(--accent-pink)
+  );
+}
+
+/* Publisher filter pills */
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.filter-pill {
+  cursor: pointer;
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  border: 1px solid #d1d5db;
+  background: #ffffff;
+  color: #374151;
+  user-select: none;
+  transition: background 0.15s ease, color 0.15s ease, transform 0.1s ease;
+}
+
+.filter-pill:hover {
+  transform: translateY(-1px);
+}
+
+.filter-pill.active {
+  color: #ffffff;
+  border-color: transparent;
+}
+
+.filter-pill.marvel.active { background: #e11d48; }
+.filter-pill.dc.active { background: #2563eb; }
+.filter-pill.image.active { background: #111827; }
+.filter-pill.boom.active { background: #7c3aed; }
+
+.filter-pill.default.active {
+  background: linear-gradient(135deg, #3b82f6, #ec4899);
+}
+
+.filters-group {
+  margin-bottom: 1.25rem;
+}
+
+.filters-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #6b7280;
+  margin-bottom: 0.4rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}

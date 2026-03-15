@@ -1,0 +1,124 @@
+{
+  "meta": {
+    "lastUpdated": "2026-03-14",
+    "description": "Upcoming retailer-exclusive comic releases",
+    "maintainedBy": "Your Site Name"
+  },
+  "exclusives": [
+    {
+      "id": "unknown-batman-158",
+      "title": "Batman #158",
+      "publisher": "DC",
+      "series": "Batman",
+      "issueNumber": 158,
+      "releaseDate": "2026-4-10-9:00AM",
+      "retailer": {
+        "name": "Unknown Comics",
+        "instagram": "https://instagram.com/unknowncomics",
+        "website": null
+      },
+      "variantType": "Retailer Exclusive",
+      "coverArtist": "Jock",
+      "printRun": null,
+      "status": "announced",
+      "source": {
+        "type": "instagram",
+        "url": "https://instagram.com/p/XXXX"
+      },
+      "notes": "Virgin cover available",
+      "addedAt": "2026-03-14"
+    },
+    {
+      "id": "midtown-spawn-350",
+      "title": "Spawn #350",
+      "publisher": "Image",
+      "series": "Spawn",
+      "issueNumber": 350,
+      "releaseDate": "2026-4-17-9:00AM",
+      "retailer": {
+        "name": "Midtown Comics",
+        "instagram": "https://instagram.com/midtowncomics",
+        "website": "https://www.midtowncomics.com"
+      },
+      "variantType": "Retailer Exclusive",
+      "coverArtist": null,
+      "printRun": null,
+      "status": "announced",
+      "source": {
+        "type": "instagram",
+        "url": "https://instagram.com/p/YYYY"
+      },
+      "notes": null,
+      "addedAt": "2026-03-14"
+    },
+    {
+      "id": "forbiddenplanet-xmen-12",
+      "title": "X-Men #12",
+      "publisher": "Marvel",
+      "series": "X-Men",
+      "issueNumber": 12,
+      "releaseDate": "2026-4-24-9:00AM",
+      "retailer": {
+        "name": "Forbidden Planet",
+        "instagram": "https://instagram.com/forbiddenplanet",
+        "website": "https://forbiddenplanet.com"
+      },
+      "variantType": "Retailer Exclusive",
+      "coverArtist": null,
+      "printRun": null,
+      "status": "announced",
+      "source": {
+        "type": "instagram",
+        "url": "https://instagram.com/p/ZZZZ"
+      },
+      "notes": "Exclusive colorway cover",
+      "addedAt": "2026-03-14"
+    },
+    {
+      "id": "unknown-somethingiscillingthechildren-38",
+      "title": "Something Is Killing the Children #38",
+      "publisher": "BOOM! Studios",
+      "series": "Something Is Killing the Children",
+      "issueNumber": 38,
+      "releaseDate": "2026-5-1-9:00AM",
+      "retailer": {
+        "name": "Unknown Comics",
+        "instagram": "https://instagram.com/unknowncomics",
+        "website": null
+      },
+      "variantType": "Retailer Exclusive",
+      "coverArtist": null,
+      "printRun": null,
+      "status": "announced",
+      "source": {
+        "type": "instagram",
+        "url": "https://instagram.com/p/AAAA"
+      },
+      "notes": null,
+      "addedAt": "2026-03-14"
+    },
+    {
+      "id": "krscomics-amazing-spiderman-55",
+      "title": "Amazing Spider-Man #55",
+      "publisher": "Marvel",
+      "series": "Amazing Spider-Man",
+      "issueNumber": 55,
+      "releaseDate": "2026-5-8-9:00AM",
+      "retailer": {
+        "name": "KRS Comics",
+        "instagram": "https://instagram.com/krscomics",
+        "website": "https://krscomics.com"
+      },
+      "variantType": "Retailer Exclusive",
+      "coverArtist": null,
+      "printRun": null,
+      "status": "announced",
+      "source": {
+        "type": "instagram",
+        "url": "https://instagram.com/p/BBBB"
+      },
+      "notes": "Trade dress and virgin variants",
+      "addedAt": "2026-03-14"
+    }
+  ]
+}
