@@ -5,183 +5,167 @@
     "maintainedBy": "Your Site Name"
   },
   "exclusives": [
-    {
-      "id": "",
-      "title": "Absolute Batman #19",
-      "publisher": "DC",
-      "series": "Absolute Batman",
-      "issueNumber": 19,
-      "releaseDate": "2026-4-8-12:00AM",
-      "retailer": {
-        "name": "markspearsmonsters",
-        "instagram": null,
-        "website": "markspearsmonsters.com"
+      {
+        "id": "",
+        "title": "Absolute Batman #19",
+        "publisher": "DC",
+        "series": "Absolute Batman",
+        "issueNumber": 19,
+        "releaseDate": "2026-4-8-12:00AM",
+        "retailer": {
+          "name": "Mark Spears Monsters",
+          "instagram": "",
+          "url": "markspearsmonsters.com"
+        },
+        "variantType": "Retailer Exclusive",
+        "coverArtist": "Mark Spears",
+        "printRun": null,
+        "status": "announced",
+        "notes": null
       },
-      "variantType": "Retailer Exclusive",
-      "coverArtist": "Mark Spears",
-      "printRun": null,
-      "status": "announced",
-      "source": {
-        "type": "instagram",
-        "url": null
+      {
+        "id": "",
+        "title": "Absolute Batman #19",
+        "publisher": "DC",
+        "series": "Absolute Batman",
+        "issueNumber": 19,
+        "releaseDate": "2026-3-16-12:00PM",
+        "retailer": {
+          "name": "Claymannart",
+          "instagram": "",
+          "url": "Claymannart.com"
+        },
+        "variantType": "Retailer Exclusive",
+        "coverArtist": "Clay Mann",
+        "printRun": null,
+        "status": "announced",
+        "notes": null
       },
-      "notes": null
-    },
-    {
-      "id": "",
-      "title": "Absolute Batman #19",
-      "publisher": "DC",
-      "series": "Absolute Batman",
-      "issueNumber": 19,
-      "releaseDate": "2026-3-16-12:00PM",
-      "retailer": {
-        "name": "Claymannart",
-        "instagram": null,
-        "website": null
+      {
+        "id": "",
+        "title": "Absolute Batman #19",
+        "publisher": "DC",
+        "series": "Absolute Batman",
+        "issueNumber": 19,
+        "releaseDate": "2026-3-13-8:00PM",
+        "retailer": {
+          "name": "Sequential Art Comics",
+          "instagram": "",
+          "url": "https://sequentialartcomics.com"
+        },
+        "variantType": "Retailer Exclusive",
+        "coverArtist": "Guillem March",
+        "printRun": null,
+        "status": "announced",
+        "notes": null
       },
-      "variantType": "Retailer Exclusive",
-      "coverArtist": "Clay Mann",
-      "printRun": null,
-      "status": "announced",
-      "source": {
-        "type": "instagram",
-        "url": null
+      {
+        "id": "",
+        "title": "Absolute Batman #19",
+        "publisher": "DC",
+        "series": "Absolute Batman",
+        "issueNumber": 19,
+        "releaseDate": "2026-3-18-00:00PM",
+        "retailer": {
+          "name": "Davis Rider",
+          "instagram": "",
+          "url": "whatnot.com"
+        },
+        "variantType": "Retailer Exclusive",
+        "coverArtist": "Dan Quintana",
+        "printRun": null,
+        "status": "announced",
+        "notes": "Drop date stated as March 18 with no time specified."
       },
-      "notes": null
-    },
-    {
-      "id": "",
-      "title": "Absolute Batman #19",
-      "publisher": "DC",
-      "series": "Absolute Batman",
-      "issueNumber": 19,
-      "releaseDate": "2026-3-16-00:00PM",
-      "retailer": {
-        "name": "Davis Rider",
-        "instagram": null,
-        "website": "whatnot.com"
+      {
+        "id": "",
+        "title": "Absolute Batman #19",
+        "publisher": "DC",
+        "series": "Absolute Batman",
+        "issueNumber": 19,
+        "releaseDate": "2026-3-18-00:00PM",
+        "retailer": {
+          "name": "Comic Tom",
+          "instagram": "",
+          "url": "whatnot.com"
+        },
+        "variantType": "Retailer Exclusive",
+        "coverArtist": "Dan Quintana",
+        "printRun": null,
+        "status": "announced",
+        "notes": "Drop date stated as March 18 with no time specified."
       },
-      "variantType": "Retailer Exclusive",
-      "coverArtist": "Dan Quintana",
-      "printRun": null,
-      "status": "announced",
-      "source": {
-        "type": "instagram",
-        "url": "whatnot.com"
+      {
+        "id": "",
+        "title": "Absolute Batman #19",
+        "publisher": "DC",
+        "series": "Absolute Batman",
+        "issueNumber": 19,
+        "releaseDate": "2026-3-19-00:00PM",
+        "retailer": {
+          "name": "Comic Tom",
+          "instagram": "",
+          "url": "whatnot.com"
+        },
+        "variantType": "Retailer Exclusive",
+        "coverArtist": "Ariel Diaz",
+        "printRun": null,
+        "status": "announced",
+        "notes": "Drop date stated as March 19 with no time specified."
       },
-      "notes": null
-    },
-    {
-      "id": "",
-      "title": "Absolute Batman #19",
-      "publisher": "DC",
-      "series": "Absolute Batman",
-      "issueNumber": 19,
-      "releaseDate": "2026-3-16-00:00PM",
-      "retailer": {
-        "name": "Comic Tom",
-        "instagram": null,
-        "website": "whatnot.com"
+      {
+        "id": "",
+        "title": "Absolute Batman #19",
+        "publisher": "DC",
+        "series": "Absolute Batman",
+        "issueNumber": 19,
+        "releaseDate": "2026-3-21-00:00PM",
+        "retailer": {
+          "name": "Trinity Comics",
+          "instagram": "",
+          "url": "whatnot.com"
+        },
+        "variantType": "Retailer Exclusive",
+        "coverArtist": null,
+        "printRun": null,
+        "status": "announced",
+        "notes": "New exclusive cover announced; Scott Snyder appearing on WhatNot. Drop date stated as March 21 with no time specified."
       },
-      "variantType": "Retailer Exclusive",
-      "coverArtist": "Dan Quintana",
-      "printRun": null,
-      "status": "announced",
-      "source": {
-        "type": "instagram",
-        "url": "whatnot.com"
+      {
+        "id": "",
+        "title": "Absolute Batman #18",
+        "publisher": "DC",
+        "series": "Absolute Batman",
+        "issueNumber": 18,
+        "releaseDate": "2026-3-16-7:00PM",
+        "retailer": {
+          "name": "The Comic Mint",
+          "instagram": "",
+          "url": "thecomicmint.com"
+        },
+        "variantType": "Retailer Exclusive",
+        "coverArtist": "InHyuk Lee",
+        "printRun": null,
+        "status": "announced",
+        "notes": "MegaCon spot foil virgin variant."
       },
-      "notes": null
-    },
-    {
-      "id": "",
-      "title": "Absolute Batman #19",
-      "publisher": "DC",
-      "series": "Absolute Batman",
-      "issueNumber": 19,
-      "releaseDate": "2026-3-19-00:00PM",
-      "retailer": {
-        "name": "Comic Tom",
-        "instagram": null,
-        "website": "whatnot.com"
-      },
-      "variantType": "Retailer Exclusive",
-      "coverArtist": "Ariel Diaz",
-      "printRun": null,
-      "status": "announced",
-      "source": {
-        "type": "instagram",
-        "website": "whatnot.com"
-      },
-      "notes": "Davis Rider & Comic Tom WhatNot MegaCon streams – “all con weekend”  - need to check WN and social media for exact drop info"
-    },
-    {
-      "id": "",
-      "title": "Absolute Batman #19 w/ Scott Snyder",
-      "publisher": "DC",
-      "series": "Absolute Batman",
-      "issueNumber": 19,
-      "releaseDate": "2026-3-21-00:00PM",
-      "retailer": {
-        "name": "Trinity Comics",
-        "instagram": null,
-        "website": "whatnot.com"
-      },
-      "variantType": "Retailer Exclusive",
-      "coverArtist": null,
-      "printRun": null,
-      "status": "announced",
-      "source": {
-        "type": "instagram",
-        "url": null
-      },
-      "notes": "New exclusive cover announced with Scott Snyder appearing on WhatNot."
-    },
-    {
-      "id": "",
-      "title": "Absolute Batman #18",
-      "publisher": "DC",
-      "series": "Absolute Batman",
-      "issueNumber": 18,
-      "releaseDate": "2026-3-16-7:00PM",
-      "retailer": {
-        "name": "The Comic Mint",
-        "instagram": null,
-        "website": "thecomicmint.com"
-      },
-      "variantType": "Retailer Exclusive",
-      "coverArtist": "InHyuk Lee",
-      "printRun": null,
-      "status": "announced",
-      "source": {
-        "type": "instagram",
-        "url": null
-      },
-      "notes": "MegaCon spot foil virgin variant; available only from 7–10 PM ET."
-    },
-
-    {
-      "id": "",
-      "title": "Absolute Batman #19",
-      "publisher": "DC",
-      "series": "Absolute Batman",
-      "issueNumber": 19,
-      "releaseDate": "2026-3-16-6:00PM",
-      "retailer": {
-        "name": "616 Comics",
-        "instagram": null,
-        "website": "the616comics.com"
-      },
-      "variantType": "Retailer Exclusive",
-      "coverArtist": "Fabrizio De Tommaso",
-      "printRun": null,
-      "status": "announced",
-      "source": {
-        "type": "instagram",
-        "url": null
-      },
-      "notes": null
-    }
-     
-  ]
+      {
+        "id": "",
+        "title": "Absolute Batman #19",
+        "publisher": "DC",
+        "series": "Absolute Batman",
+        "issueNumber": 19,
+        "releaseDate": "2026-3-16-6:00PM",
+        "retailer": {
+          "name": "616 Comics",
+          "instagram": "",
+          "url": "the616comics.com"
+        },
+        "variantType": "Retailer Exclusive",
+        "coverArtist": "Fabrizio De Tommaso",
+        "printRun": null,
+        "status": "announced",
+        "notes": null
+      }
+    ]
 }
