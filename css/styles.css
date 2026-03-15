@@ -153,3 +153,27 @@ h1 {
   text-transform: uppercase;
   letter-spacing: 0.05em;
 }
+
+/* Thumbnail floated to the left */
+.thumb {
+  float: left;
+  width: 72px;          /* small, consistent size */
+  margin-right: 0.75rem;
+  margin-bottom: 0.25rem;
+}
+
+.thumb img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 6px;
+  object-fit: cover;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
+}
+
+/* Ensure the card clears the float */
+.exclusive::after {
+  content: "";
+  display: block;
+  clear: both;
+}
