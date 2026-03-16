@@ -82,6 +82,69 @@
       `;
     }
 
+    function parseReleaseParts(str) {
+      // YYYY-M-DD-hh:mmAM/PM
+      const m = String(str ?? '').match(
+        /^(\d{4})-(\d{1,2})-(\d{1,2})-(\d{1,2}):(\d{2})(AM|PM)$/
+      );
+      if (!m) return null;
+
+      let [, y, mo, d, h, mi, ap] = m;
+      y = +y; mo = +mo; d = +d; h = +h; mi = +mi;
+
+      if (ap === 'PM' && h !== 12) h += 12;
+      if (ap === 'AM' && h === 12) h = 0;
+
+      return { y, mo, d, h, mi };
+    }
+
+
+    // Convert ET wall-clock parts to a UTC timestamp (ms), DST-safe.
+    function etPartsToUtcMs(parts) {
+      const { y, mo, d, h, mi } = parts;
+
+      const utcGuess = Date.UTC(y, mo - 1, d, h, mi, 0);
+
+      const fmt = new Intl.DateTimeFormat('en-US', {
+        timeZone: 'America/New_York',
+        year: 'numeric',
+        month: '2-digit',
+        day: '2-digit',
+        hour: '2-digit',
+        minute: '2-digit',
+        hour12: false
+      });
+
+      function partsFromUtc(ms) {
+        const p = fmt.formatToParts(new Date(ms));
+        const get = (type) => p.find(x => x.type === type)?.value;
+        return {
+          y: +get('year'),
+          mo: +get('month'),
+          d: +get('day'),
+          h: +get('hour'),
+          mi: +get('minute')
+        };
+      }
+
+      const shown = partsFromUtc(utcGuess);
+
+      // Compute minute delta between desired ET wall time and what the guess shows in ET.
+      const desired = (((y * 12 + mo) * 31 + d) * 24 + h) * 60 + mi;
+      const actual  = (((shown.y * 12 + shown.mo) * 31 + shown.d) * 24 + shown.h) * 60 + shown.mi;
+
+      const deltaMinutes = desired - actual;
+      return utcGuess + deltaMinutes * 60 * 1000;
+    }
+
+
+        // Convenience: from your releaseDate string → Date object representing the true moment
+    function parseReleaseDateAsET(str) {
+      const parts = parseReleaseParts(str);
+      if (!parts) return null;
+      return new Date(etPartsToUtcMs(parts));
+    }
+
     /* ---------- Date handling ---------- */
     function parseReleaseDate(str) {
       const m = String(str ?? '').match(
@@ -98,9 +161,26 @@
       return new Date(y, mo, d, h, mi, 0);
     }
 
-    function formatReleaseDisplay(str) {
-      const d = parseReleaseDate(str);
+    function formatReleaseDisplayET(str) {
+      const d = parseReleaseDateAsET(str);
       if (!d) return 'TBD';
+
+      // Display in Eastern Time (handles EST/EDT automatically)
+      return d.toLocaleString(undefined, {
+        timeZone: 'America/New_York',
+        month: 'long',
+        day: 'numeric',
+        hour: 'numeric',
+        minute: '2-digit',
+        hour12: true
+      });
+    }
+
+    function formatReleaseDisplayLocal(str) {
+      const d = parseReleaseDateAsET(str);
+      if (!d) return 'TBD';
+
+      // Display in the viewer's LOCAL timezone (no timeZone option)
       return d.toLocaleString(undefined, {
         month: 'long',
         day: 'numeric',
@@ -110,11 +190,54 @@
       });
     }
 
-    function formatCountdown(str) {
-      const d = parseReleaseDate(str);
-      if (!d) return '';
+    // Convert "New York local time" parts to a real UTC timestamp (ms)
+    // DST-safe because it uses IANA time zone rules.
+    function nyPartsToUtcMs(parts) {
+      const { y, mo, d, h, mi } = parts;
 
-      const diff = d - new Date();
+      // Start with a UTC guess for the same wall-clock time.
+      // We'll then find the correct offset by comparing what New York would display.
+      const utcGuess = Date.UTC(y, mo - 1, d, h, mi, 0);
+
+      // This formatter tells us what *New York* thinks the wall-clock is at a given UTC instant.
+      const fmt = new Intl.DateTimeFormat('en-US', {
+        timeZone: 'America/New_York',
+        year: 'numeric',
+        month: '2-digit',
+        day: '2-digit',
+        hour: '2-digit',
+        minute: '2-digit',
+        hour12: false
+      });
+
+      function partsFromUtc(ms) {
+        const p = fmt.formatToParts(new Date(ms));
+        const get = (type) => p.find(x => x.type === type)?.value;
+        return {
+          y: +get('year'),
+          mo: +get('month'),
+          d: +get('day'),
+          h: +get('hour'),
+          mi: +get('minute')
+        };
+      }
+
+      // Compute how far off our guess is, in minutes, then correct the guess.
+      const shown = partsFromUtc(utcGuess);
+
+      const desiredTotal = (((y * 12 + mo) * 31 + d) * 24 + h) * 60 + mi;
+      const shownTotal   = (((shown.y * 12 + shown.mo) * 31 + shown.d) * 24 + shown.h) * 60 + shown.mi;
+
+      const deltaMinutes = desiredTotal - shownTotal;
+      return utcGuess + deltaMinutes * 60 * 1000;
+    }
+
+    function formatCountdown(str) {
+      const parts = parseReleaseParts(str);
+      if (!parts) return '';
+
+      const targetMs = nyPartsToUtcMs(parts);
+      const diff = targetMs - Date.now();
       if (diff <= 0) return '';
 
       const mins = Math.floor(diff / 60000);
@@ -125,6 +248,16 @@
       if (days === 0 && hours === 0) return `Releasing in ${minutes} min ⚡`;
       if (days === 0) return `Releasing in ${hours}h ${minutes}m`;
       return `Releasing in ${days}d ${hours}h`;
+    }
+
+    function isWithin24HoursET(str) {
+      const d = parseReleaseDateAsET(str); // same ET parser you already use
+      if (!d) return false;
+
+      const now = Date.now();
+      const diffMs = d.getTime() - now;
+
+      return diffMs > 0 && diffMs <= 24 * 60 * 60 * 1000;
     }
 
     /* ---------- State ---------- */
@@ -206,6 +339,10 @@
         const div = document.createElement('div');
         div.className = 'exclusive';
 
+        if (isWithin24HoursET(item.releaseDate)) {
+          div.classList.add('soon');
+        }
+
         const countdown = formatCountdown(item.releaseDate);
 
         div.innerHTML = `
@@ -217,10 +354,11 @@
                 <span class="badge ${getPublisherClass(item.publisher)}">
                   ${escapeHtml(item.publisher)}
                 </span>
+                  ${isWithin24HoursET(item.releaseDate) ? `<span class="soon-badge">Releases Soon</span>` : ''}
               </div>
 
               <div class="meta">
-                Release: ${escapeHtml(formatReleaseDisplay(item.releaseDate))}
+                Release Time: ${escapeHtml(formatReleaseDisplayET(item.releaseDate))} ET / ${escapeHtml(formatReleaseDisplayLocal(item.releaseDate))}
               </div>
 
               ${countdown ? `<div class="meta countdown">${escapeHtml(countdown)}</div>` : ''}
