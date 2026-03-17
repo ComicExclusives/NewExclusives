@@ -44,6 +44,23 @@
       "publisher": "DC",
       "series": "Absolute Batman",
       "issueNumber": 19,
+      "image": "https://pbs.twimg.com/media/HDTVaW_X0AAP9Ev?format=jpg&name=small",
+      "releaseDate": "2026-3-18-12:00PM",
+      "retailer": {
+        "name": "Claymannart",
+        "instagram": "",
+        "website":"https://www.Claymannart.com"
+      },
+      "variantType": "Retailer Exclusive",
+      "coverArtist": "Clay Mann",
+      "notes": null
+    },
+    {
+      "id": "",
+      "title": "Absolute Batman #19",
+      "publisher": "DC",
+      "series": "Absolute Batman",
+      "issueNumber": 19,
       "releaseDate": "2026-3-13-8:00PM",
       "retailer": {
         "name": "Sequential Art Comics",
@@ -60,11 +77,11 @@
       "publisher": "DC",
       "series": "Absolute Batman",
       "issueNumber": 19,
-      "releaseDate": "2026-3-18-00:00PM",
+      "releaseDate": "2026-3-18-02:00PM",
       "retailer": {
         "name": "Davis Rider",
         "instagram": "",
-        "website":"https://www.whatnot.com"
+        "website":"https://www.whatnot.com/live/4392cab7-b3ab-4145-afee-3fc73aa359a3?referringSource=profile"
       },
       "variantType": "Retailer Exclusive",
       "coverArtist": "Dan Quintana",
@@ -76,11 +93,11 @@
       "publisher": "DC",
       "series": "Absolute Batman",
       "issueNumber": 19,
-      "releaseDate": "2026-3-18-00:00PM",
+      "releaseDate": "2026-3-18-06:00PM",
       "retailer": {
         "name": "Comic Tom",
         "instagram": "",
-        "website":"https://www.whatnot.com"
+        "website":"https://www.whatnot.com/live/6ab310d7-7558-4e12-935e-47b551bd3155?referringSource=profile"
       },
       "variantType": "Retailer Exclusive",
       "coverArtist": "Dan Quintana",
@@ -92,11 +109,11 @@
       "publisher": "DC",
       "series": "Absolute Batman",
       "issueNumber": 19,
-      "releaseDate": "2026-3-19-00:00PM",
+      "releaseDate": "2026-3-19-09:00PM",
       "retailer": {
         "name": "Comic Tom",
         "instagram": "",
-        "website":"https://www.whatnot.com"
+        "website":"https://www.whatnot.com/live/b3a326ef-ddce-40df-a59f-b6e6d4db7824?referringSource=profile"
       },
       "variantType": "Retailer Exclusive",
       "coverArtist": "Ariel Diaz",
@@ -186,6 +203,24 @@
       "coverArtist": "Ben Oliver",
       "notes": null,
       "addedAt": ""
+    },
+    {
+      "id": "",
+      "title": "Absolute Batman #19",
+      "publisher": "DC",
+      "series": "Absolute Batman",
+      "issueNumber": 19,
+      "releaseDate": "2026-3-18-12:00PM",
+      "retailer": {
+        "name": null,
+        "instagram": "",
+        "url": "markbrooksart.com"
+      },
+      "variantType": "Retailer Exclusive",
+      "coverArtist": "Mark Brooks",
+      "printRun": null,
+      "status": "announced",
+      "notes": null
     }
   ]
 }
