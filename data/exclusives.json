@@ -81,11 +81,12 @@
       "retailer": {
         "name": "Davis Rider",
         "instagram": "",
-        "website":"https://www.whatnot.com/live/4392cab7-b3ab-4145-afee-3fc73aa359a3?referringSource=profile"
+        "website":"https://www.whatnot.com/live/4392cab7-b3ab-4145-afee-3fc73aa359a3"
       },
       "variantType": "Retailer Exclusive",
       "coverArtist": "Dan Quintana",
-      "notes": "Drop date stated as March 18 with no time specified."
+      "notes": "Drop date stated as March 18 with no time specified.",
+      "image": "https://scontent-sea5-1.cdninstagram.com/v/t51.82787-15/645475724_18078006758610814_2824262444502844317_n.jpg?stp=dst-jpg_e35_p720x720_tt6&_nc_cat=109&ig_cache_key=Mzg0ODU0MDczOTM4MzQ2ODczMg%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjE0NDB4MTc5Ni5zZHIuQzMifQ%3D%3D&_nc_ohc=aDh6NStFjzIQ7kNvwHcgkd5&_nc_oc=AdnHywI9KCO5GU3w0XGvG2ALHOVOO-TKHyOlvKQJD6B63UkuhpncmIfczWP_-pf7Eeu3qmqSvOIMZUhSgb3AN-eg&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-sea5-1.cdninstagram.com&_nc_gid=ylGqUdhScPC1p5_MmVg3Dw&_nc_ss=8&oh=00_AfyLN_rAuuaiZxMXtzVXGamRfAoWzPA0wj_aFRxMshkzUA&oe=69BFFD2A"
     },
     {
       "id": "",
@@ -93,15 +94,16 @@
       "publisher": "DC",
       "series": "Absolute Batman",
       "issueNumber": 19,
-      "releaseDate": "2026-3-18-06:00PM",
+      "releaseDate": "2026-3-18-03:00PM",
       "retailer": {
         "name": "Comic Tom",
         "instagram": "",
-        "website":"https://www.whatnot.com/live/6ab310d7-7558-4e12-935e-47b551bd3155?referringSource=profile"
+        "website":"https://www.whatnot.com/live/6ab310d7-7558-4e12-935e-47b551bd3155"
       },
       "variantType": "Retailer Exclusive",
       "coverArtist": "Dan Quintana",
-      "notes": "Drop date stated as March 18 with no time specified."
+      "notes": "Drop date stated as March 18 with no time specified.",
+      "image": "https://scontent-sea5-1.cdninstagram.com/v/t51.82787-15/645475724_18078006758610814_2824262444502844317_n.jpg?stp=dst-jpg_e35_p720x720_tt6&_nc_cat=109&ig_cache_key=Mzg0ODU0MDczOTM4MzQ2ODczMg%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjE0NDB4MTc5Ni5zZHIuQzMifQ%3D%3D&_nc_ohc=aDh6NStFjzIQ7kNvwHcgkd5&_nc_oc=AdnHywI9KCO5GU3w0XGvG2ALHOVOO-TKHyOlvKQJD6B63UkuhpncmIfczWP_-pf7Eeu3qmqSvOIMZUhSgb3AN-eg&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-sea5-1.cdninstagram.com&_nc_gid=ylGqUdhScPC1p5_MmVg3Dw&_nc_ss=8&oh=00_AfyLN_rAuuaiZxMXtzVXGamRfAoWzPA0wj_aFRxMshkzUA&oe=69BFFD2A"
     },
     {
       "id": "",
@@ -110,14 +112,22 @@
       "series": "Absolute Batman",
       "issueNumber": 19,
       "releaseDate": "2026-3-19-09:00PM",
-      "retailer": {
+      "retailers": [
+      {
+        "name": "Davis Rider",
+        "instagram": "",
+        "website":"https://www.whatnot.com/live/4392cab7-b3ab-4145-afee-3fc73aa359a3"
+      },
+      {
         "name": "Comic Tom",
         "instagram": "",
-        "website":"https://www.whatnot.com/live/b3a326ef-ddce-40df-a59f-b6e6d4db7824?referringSource=profile"
-      },
+        "website":"https://www.whatnot.com/live/6ab310d7-7558-4e12-935e-47b551bd3155"
+      }
+    ],
       "variantType": "Retailer Exclusive",
       "coverArtist": "Ariel Diaz",
-      "notes": "Drop date stated as March 19 with no time specified."
+      "notes": "Drop date stated as March 19 with no time specified.",
+      "image": "https://scontent-sea1-1.cdninstagram.com/v/t51.82787-15/651046215_18570089431047257_7557026304776179861_n.jpg?stp=dst-jpg_e35_p720x720_tt6&_nc_cat=104&ig_cache_key=Mzg1MTQxOTM0MjMyODY2NzkxNg%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjE0NDB4MTc5OC5zZHIuQzMifQ%3D%3D&_nc_ohc=85lug8bRpoMQ7kNvwHwcGiK&_nc_oc=AdnYgyAHEGNT-2TV_LdTzt4yF-AFKx6tAi3pxBHX1p5aeXGhQVHo6Kmgh8bWzZ6LhukVPPij6dUh8xkg7B89f0dh&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-sea1-1.cdninstagram.com&_nc_gid=1pVxeK4jHso-ZLOTTp60ag&_nc_ss=8&oh=00_AfwkBO6UB2xpt_NPuSBXK26soqaj5lPo9pY4c1pVmb2cbg&oe=69C02541"
     },
     {
       "id": "",

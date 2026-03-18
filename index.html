@@ -260,6 +260,80 @@
       return diffMs > 0 && diffMs <= 24 * 60 * 60 * 1000;
     }
 
+    function getLocalTzShortName(dateObj = new Date()) {
+      // Try to get a short TZ name like "PDT" or "GMT-7"
+      const parts = new Intl.DateTimeFormat(undefined, {
+        timeZoneName: 'short'
+      }).formatToParts(dateObj);
+
+      const tz = parts.find(p => p.type === 'timeZoneName')?.value;
+
+      // Some environments return something unhelpful; fallback to GMT offset
+      if (tz && tz !== 'GMT' && tz !== 'UTC') return tz;
+
+      // Fallback: GMT offset like "GMT-07:00"
+      const offsetMin = -dateObj.getTimezoneOffset(); // minutes ahead of UTC
+      const sign = offsetMin >= 0 ? '+' : '-';
+      const abs = Math.abs(offsetMin);
+      const hh = String(Math.floor(abs / 60)).padStart(2, '0');
+      const mm = String(abs % 60).padStart(2, '0');
+      return `GMT${sign}${hh}:${mm}`;
+    }
+
+    function isUserInEasternTime(releaseDateStr) {
+      // Use the release moment if available (DST can vary by date)
+      const d = parseReleaseDateAsET(releaseDateStr) || new Date();
+
+      // Best case: browser provides IANA timezone
+      const tz = Intl.DateTimeFormat().resolvedOptions().timeZone;
+      if (tz === 'America/New_York') return true;
+
+      // Fallback: compare offsets at that moment
+      // If local offset matches New York offset at that moment, treat as ET.
+      const localOffset = -d.getTimezoneOffset(); // minutes east of UTC
+
+      // Compute NY offset by formatting with timeZoneName:'shortOffset' when available
+      // Fallback to parsing 'GMT-4'/'GMT-5' style if returned.
+      let nyOffset = null;
+
+      // Many modern browsers support "shortOffset"
+      const parts = new Intl.DateTimeFormat('en-US', {
+        timeZone: 'America/New_York',
+        timeZoneName: 'shortOffset'
+      }).formatToParts(d);
+
+      const off = parts.find(p => p.type === 'timeZoneName')?.value; // e.g. "GMT-4"
+      if (off && off.startsWith('GMT')) {
+        const m = off.match(/^GMT([+-])(\d{1,2})(?::(\d{2}))?$/);
+        if (m) {
+          const sign = m[1] === '+' ? 1 : -1;
+          const hh = Number(m[2]);
+          const mm = m[3] ? Number(m[3]) : 0;
+          nyOffset = sign * (hh * 60 + mm);
+        }
+      }
+
+      // If we couldn't determine NY offset, don’t hide anything.
+      if (nyOffset === null) return false;
+
+      return localOffset === nyOffset;
+    }
+
+    function formatReleaseTimeLine(item) {
+      const et = formatReleaseDisplayET(item.releaseDate);
+      const local = formatReleaseDisplayLocal(item.releaseDate);
+
+      // Local TZ shorthand like "PDT" / "GMT-07:00"
+      const releaseMoment = parseReleaseDateAsET(item.releaseDate);
+      const localTz = releaseMoment ? getLocalTzShortName(releaseMoment) : getLocalTzShortName();
+
+      if (isUserInEasternTime(item.releaseDate)) {
+        return `Release Time: ${et} ET`;
+      }
+
+      return `Release Time: ${et} ET / ${local} ${localTz}`;
+    }
+
     /* ---------- State ---------- */
     let allExclusives = [];
     let activePublisher = 'all';
@@ -345,6 +419,9 @@
 
         const countdown = formatCountdown(item.releaseDate);
 
+        const releaseMoment = parseReleaseDateAsET(item.releaseDate); // your ET-based Date
+        const localTz = releaseMoment ? getLocalTzShortName(releaseMoment) : getLocalTzShortName();
+
         div.innerHTML = `
           <div class="card">
             ${renderThumbnail(item)}
@@ -358,9 +435,9 @@
               </div>
 
               <div class="meta">
-                Release Time: ${escapeHtml(formatReleaseDisplayET(item.releaseDate))} ET / ${escapeHtml(formatReleaseDisplayLocal(item.releaseDate))}
+                ${escapeHtml(formatReleaseTimeLine(item))}
               </div>
-
+              
               ${countdown ? `<div class="meta countdown">${escapeHtml(countdown)}</div>` : ''}
 
               <div class="retailer">
